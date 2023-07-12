@@ -5,10 +5,9 @@ import org.junit.jupiter.api.Test;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CountDownLatch;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class QueueSchemaTest {
-
     @Test
     public void whenSingleReceiver() throws InterruptedException {
         var queue = new QueueSchema();
@@ -65,7 +64,6 @@ class QueueSchemaTest {
         assertThat(result).contains("18", "20");
     }
 
-
     @Test
     public void whenMultiReceivers() throws InterruptedException {
         var queue = new QueueSchema();
@@ -82,5 +80,4 @@ class QueueSchemaTest {
         thread.interrupt();
         assertThat(result).containsOnly("23", "20");
     }
-
 }

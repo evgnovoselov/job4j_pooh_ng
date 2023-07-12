@@ -1,6 +1,9 @@
 package ru.job4j.pooh;
 
-import java.util.concurrent.*;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.LinkedBlockingQueue;
 
 public class QueueSchema implements Schema {
     private final CopyOnWriteArrayList<Receiver> receivers = new CopyOnWriteArrayList<>();
@@ -35,7 +38,7 @@ public class QueueSchema implements Schema {
                     }
                 }
                 condition.off();
-            } while(condition.check());
+            } while (condition.check());
             try {
                 condition.await();
             } catch (InterruptedException e) {
