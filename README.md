@@ -1,3 +1,10 @@
+# Job4j Pooh JMS
+
+[![Java CI with Maven](https://github.com/evgnovoselov/job4j_pooh_ng/actions/workflows/maven.yml/badge.svg)](https://github.com/evgnovoselov/job4j_pooh_ng/actions/workflows/maven.yml)
+[![codecov](https://codecov.io/gh/evgnovoselov/job4j_pooh_ng/branch/master/graph/badge.svg?token=fw2d6PH3YD)](https://codecov.io/gh/evgnovoselov/job4j_pooh_ng)
+
+## Описание
+
 Брокер сообщений - это отдельное приложение, которое пересылает сообщения между другими приложениями.
 
 Зачем они нужны и почему приложение не может напрямую передать данные в другое приложение?
